@@ -36,6 +36,7 @@ const Address = () => {
 				<div className="search-field__container">
 					<input type="text"
 						   onChange={(e: ChangeEvent<HTMLInputElement>) => setSearch(e.target.value)}
+							 minLength={3}
 						   className="search-field__input"
 						   placeholder="Введите интересующий вас адрес"/>
 
