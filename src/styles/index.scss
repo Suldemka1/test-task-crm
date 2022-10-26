@@ -1,18 +1,60 @@
+@import '_config.scss';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 200vh;
 }
 
 header {
-  background: blueviolet;
+  height: fit-content;
+  background: $basecolor;
   color: white;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  margin: 20px 0;
 }
 
 .container {
   max-width: 1440px;
   margin: auto;
 }
+
+.page {
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 0 32px;
+  }
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  padding: 32px;
+}
+
+@import "styles.scss";
